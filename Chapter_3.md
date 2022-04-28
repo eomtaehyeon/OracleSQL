@@ -40,7 +40,7 @@ ORDER BY 컬럼;
     ORDER BY employee_id;
     ```
     
-![Untitled](Chapter_3/Untitled 1.png)
+![Untitled](Chapter_3/Untitled1.png)
     
 - 급여가 5000 이상이고 job_id가 IT_PROG 사원 조회
     
@@ -57,7 +57,7 @@ ORDER BY 컬럼;
     ORDER BY employee_id;
     ```
     
-![Untitled](Chapter_3/Untitled 2.png)
+![Untitled](Chapter_3/Untitled2.png)
     
 - 영어는 대소문자 구분
     
@@ -72,7 +72,7 @@ ORDER BY 컬럼;
     ORDER BY employee_id;
     ```
     
-![Untitled](Chapter_3/Untitled 3.png)
+![Untitled](Chapter_3/Untitled3.png)
     
 - 합집합
     
@@ -90,7 +90,7 @@ ORDER BY 컬럼;
     ORDER BY employee_id;
     ```
     
-![Untitled](Chapter_3/Untitled 4.png)
+![Untitled](Chapter_3/Untitled4.png)
     
 
 # — INSERT —
@@ -132,9 +132,9 @@ INSERT INTO ex3_1(col1, col2, col3)
 VALUES ('ABC', 10, 30);
 ```
 
-![Untitled](Chapter_3/Untitled 5.png)
+![Untitled](Chapter_3/Untitled5.png)
 
-![Untitled](Chapter_3/Untitled 6.png)
+![Untitled](Chapter_3/Untitled6.png)
 
 - “not enough values” 오류
 
@@ -143,7 +143,7 @@ INSERT INTO ex3_1
 VALUES ('GHI', 30);
 ```
 
-![Untitled](Chapter_3/Untitled 7.png)
+![Untitled](Chapter_3/Untitled7.png)
 
 - INSERT ~ SELECT 형태
     
@@ -164,7 +164,7 @@ VALUES ('GHI', 30);
     SELECT * FROM ex3_2;
     ```
     
-![Untitled](Chapter_3/Untitled 8.png)
+![Untitled](Chapter_3/Untitled8.png)
     
 
 # — UPDATE —
@@ -177,7 +177,7 @@ VALUES ('GHI', 30);
         FROM ex3_1;
     ```
     
-![Untitled](Chapter_3/Untitled 9.png)
+![Untitled](Chapter_3/Untitled9.png)
     
 - ex3_1 테이블의 col2 값을 모두 50으로 변경
     
@@ -186,7 +186,7 @@ VALUES ('GHI', 30);
         SET col2 = 50;
     ```
     
-![Untitled](Chapter_3/Untitled 10.png)
+![Untitled](Chapter_3/Untitled10.png)
     
 - col3 값을 UPDATE
     
@@ -315,7 +315,7 @@ SELECT
 FROM employees;
 ```
 
-![Untitled](Chapter_3/Untitled 11.png)
+![Untitled](Chapter_3/Untitled11.png)
 
 # — 조건식 —
 
@@ -330,7 +330,7 @@ FROM employees
 WHERE salary = ANY (2000, 3000, 4000);
 ```
 
-![Untitled](Chapter_3/Untitled 12.png)
+![Untitled](Chapter_3/Untitled12.png)
 
 - or
 
@@ -343,7 +343,7 @@ FROM employees
 WHERE salary = 2000 or salary = 3000 or salary = 4000;
 ```
 
-![Untitled](Chapter_3/Untitled 13.png)
+![Untitled](Chapter_3/Untitled13.png)
 
 - ALL - 괄호 안의 조건을 모두 만족하는 조건
 
@@ -359,7 +359,7 @@ WHERE salary = ALL(2000, 3000, 4000)
 ORDER BY employee_id;
 ```
 
-![Untitled](Chapter_3/Untitled 14.png)
+![Untitled](Chapter_3/Untitled14.png)
 
 - SOME
 
@@ -374,7 +374,7 @@ WHERE salary = SOME(2000, 3000, 4000)
 ORDER BY employee_id;
 ```
 
-![Untitled](Chapter_3/Untitled 15.png)
+![Untitled](Chapter_3/Untitled15.png)
 
 - 논리 조건식
 
@@ -391,7 +391,7 @@ WHERE NOT salary >= 2500
 ORDER BY employee_id
 ```
 
-![Untitled](Chapter_3/Untitled 16.png)
+![Untitled](Chapter_3/Untitled16.png)
 
 - BETWEEN AND 조건식
 
@@ -408,7 +408,7 @@ WHERE salary BETWEEN 2000 AND 2500
 ORDER BY employee_id;
 ```
 
-![Untitled](Chapter_3/Untitled 17.png)
+![Untitled](Chapter_3/Untitled17.png)
 
 - IN 조건식(IN 은 부등호를 쓰지 않는다.)(ANY 나 SOME은 부등호를 사용.)
 
@@ -422,7 +422,7 @@ WHERE salary IN (2000, 3000, 4000)
 ORDER BY employee_id;
 ```
 
-![Untitled](Chapter_3/Untitled 18.png)
+![Untitled](Chapter_3/Untitled18.png)
 
 - NOT IN 조건식 (괄호 안의 조건을 제외한 모든것을 조회)
 
@@ -460,7 +460,7 @@ WHERE EXISTS (SELECT *
 ORDER BY a.department_name;
 ```
 
-![Untitled](Chapter_3/Untitled 19.png)
+![Untitled](Chapter_3/Untitled19.png)
 
 - LIKE  조건식
 
@@ -474,7 +474,7 @@ WHERE emp_name LIKE 'A%'
 ORDER BY emp_name;
 ```
 
-![Untitled](Chapter_3/Untitled 20.png)
+![Untitled](Chapter_3/Untitled20.png)
 
 ```sql
 -- 앞에 어떤 글자가 와도 상관없이 'a'로 끝나는 모두 조회
@@ -484,7 +484,7 @@ WHERE emp_name LIKE '%a'
 ORDER BY emp_name;
 ```
 
-![Untitled](Chapter_3/Untitled 21.png)
+![Untitled](Chapter_3/Untitled21.png)
 
 ```sql
 -- '__c' 세번쨰 글자가 c 인 경우 모두 조회
@@ -494,7 +494,7 @@ WHERE emp_name LIKE '__c%'
 ORDER BY emp_name;
 ```
 
-![Untitled](Chapter_3/Untitled 22.png)
+![Untitled](Chapter_3/Untitled22.png)
 
 # 핵심 정리
 
